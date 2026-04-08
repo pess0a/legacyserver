@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Toad")
 local monster = {}
 
 monster.description = "a toad"
-monster.experience = 60
+monster.experience = 70
 monster.outfit = {
 	lookType = 222,
 	lookHead = 0,
@@ -17,18 +17,18 @@ monster.raceId = 262
 monster.Bestiary = {
 	class = "Amphibic",
 	race = BESTY_RACE_AMPHIBIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
 	Stars = 2,
 	Occurrence = 0,
 	Locations = "The Laguna Islands, Arena and Zoo Quarter, Tiquanda/Tarantula Caves, \z
 		Shadowthorn Bog God Temple, Northern Zao Plantations, Northern Brimstone Bug Cave.",
 }
 
-monster.health = 135
-monster.maxHealth = 135
+monster.health = 160
+monster.maxHealth = 160
 monster.race = "blood"
 monster.corpse = 6077
 monster.speed = 105
@@ -83,28 +83,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 80000, maxCount = 20 },
-	{ name = "war hammer", chance = 148 },
-	{ name = "mace", chance = 2854 },
+	{ name = "gold coin", chance = 95000, maxCount = 20 },
+	{ name = "mace", chance = 3000 },
 	{ id = 3578, chance = 20000 },
-	{ name = "poisonous slime", chance = 4761 },
+	{ name = "poisonous slime", chance = 5000 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -30, effect = CONST_ME_DRAWBLOOD, condition = { type = CONDITION_POISON, totalDamage = 20, interval = 4000 } },
-	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -8, maxDamage = -17, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -38, effect = CONST_ME_DRAWBLOOD, condition = { type = CONDITION_POISON, totalDamage = 20, interval = 4000 } },
+	{ name = "combat", interval = 2000, chance = 50, type = COMBAT_PHYSICALDAMAGE, minDamage = -12, maxDamage = -27, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_GREEN_RINGS, target = false },
 }
 
 monster.defenses = {
-	defense = 6,
-	armor = 6,
+	defense = 10,
+	armor = 10,
 	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = -20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 50 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<houses>
+	<house name="" houseid="3830" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="1" clientid="0" beds="0" />
+	<house name="" houseid="3839" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="2" clientid="0" beds="0" />
+	<house name="" houseid="3840" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="2" clientid="0" beds="0" />
+	<house name="" houseid="3934" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="1" clientid="0" beds="0" />
+	<house name="" houseid="3935" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" clientid="0" beds="0" />
+	<house name="Tom House 1" houseid="3936" entryx="1010" entryy="825" entryz="7" rent="0" townid="1" size="20" clientid="0" beds="1" />
+	<house name="Tom House 2" houseid="3937" entryx="1010" entryy="826" entryz="6" rent="0" townid="1" size="37" clientid="0" beds="2" />
+	<house name="Dixi House" houseid="3940" entryx="1038" entryy="831" entryz="6" rent="0" townid="1" size="16" clientid="0" beds="1" />
+	<house name="All Dee House" houseid="3941" entryx="991" entryy="802" entryz="6" rent="0" townid="1" size="38" clientid="0" beds="2" />
+	<house name="" houseid="3944" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="1" clientid="0" beds="0" />
+	<house name="Tom House 3" houseid="3945" entryx="1011" entryy="826" entryz="6" rent="0" townid="1" size="25" clientid="0" beds="1" />
+	<house name="Tom House 4" houseid="3946" entryx="1011" entryy="830" entryz="6" rent="0" townid="1" size="31" clientid="0" beds="1" />
+	<house name="Tom House 5" houseid="3947" entryx="1009" entryy="826" entryz="5" rent="0" townid="1" size="19" clientid="0" beds="2" />
+	<house name="Tom House 6" houseid="3948" entryx="1011" entryy="827" entryz="5" rent="0" townid="1" size="38" clientid="0" beds="2" />
+	<house name="Tom House 7" houseid="3949" entryx="1013" entryy="832" entryz="7" rent="0" townid="1" size="21" clientid="0" beds="1" />
+	<house name="Vip Area House 1" houseid="3950" entryx="981" entryy="829" entryz="7" rent="0" townid="1" size="17" clientid="0" beds="1" />
+	<house name="Vip Area House 2" houseid="3951" entryx="981" entryy="830" entryz="7" rent="0" townid="1" size="15" clientid="0" beds="1" />
+	<house name="Tom House 8" houseid="3952" entryx="1011" entryy="845" entryz="6" rent="0" townid="1" size="28" clientid="0" beds="1" />
+	<house name="North House 1" houseid="3953" entryx="1015" entryy="801" entryz="6" rent="0" townid="1" size="24" clientid="0" beds="2" />
+	<house name="Vip Area House 3" houseid="3954" entryx="971" entryy="841" entryz="7" rent="0" townid="1" size="19" clientid="0" beds="1" />
+	<house name="Guild House" houseid="3955" entryx="1038" entryy="866" entryz="7" rent="0" guildhall="true" townid="1" size="274" clientid="0" beds="10" />
+	<house name="South House" houseid="3956" entryx="1024" entryy="857" entryz="6" rent="0" townid="1" size="25" clientid="0" beds="1" />
+	<house name="All Dee House 2" houseid="3957" entryx="993" entryy="802" entryz="7" rent="0" townid="1" size="8" clientid="0" beds="1" />
+</houses>

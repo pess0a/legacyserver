@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Goblin")
 local monster = {}
 
 monster.description = "a goblin"
-monster.experience = 25
+monster.experience = 30
 monster.outfit = {
 	lookType = 61,
 	lookHead = 0,
@@ -17,11 +17,11 @@ monster.raceId = 61
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
+	Stars = 2,
 	Occurrence = 0,
 	Locations = "Femor Hills, north east of Carlin, Edron Goblin Cave, Rookgaard (Premium Area), \z
 		Maze of Lost Souls and Fenrock.",
@@ -31,7 +31,7 @@ monster.health = 50
 monster.maxHealth = 50
 monster.race = "blood"
 monster.corpse = 6002
-monster.speed = 60
+monster.speed = 90
 monster.manaCost = 290
 
 monster.changeTarget = {
@@ -55,7 +55,7 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 15,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -79,32 +79,32 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 1781, chance = 15290, maxCount = 3 }, -- small stone
-	{ id = 3031, chance = 50320, maxCount = 9 }, -- gold coin
+	{ id = 1781, chance = 25290, maxCount = 3 }, -- small stone
+	{ id = 3031, chance = 90320, maxCount = 18 }, -- gold coin
 	{ id = 3115, chance = 1130 }, -- bone
-	{ id = 3120, chance = 1000 }, -- mouldy cheese
-	{ id = 3267, chance = 1800 }, -- dagger
-	{ id = 3294, chance = 8870 }, -- short sword
-	{ id = 3337, chance = 4900 }, -- bone club
-	{ id = 3355, chance = 1940 }, -- leather helmet
-	{ id = 3361, chance = 2510 }, -- leather armor
-	{ id = 3462, chance = 9700 }, -- small axe
+	{ id = 3120, chance = 100 }, -- mouldy cheese
+	{ id = 3267, chance = 5000 }, -- dagger
+	{ id = 3294, chance = 2070 }, -- short sword
+	{ id = 3337, chance = 2000 }, -- bone club
+	{ id = 3355, chance = 1040 }, -- leather helmet
+	{ id = 3361, chance = 1510 }, -- leather armor
+	{ id = 3462, chance = 4700 }, -- small axe
 	{ id = 3578, chance = 12750 }, -- fish
-	{ id = 11539, chance = 910 }, -- goblin ear
+	{ id = 11539, chance = 5000 }, -- goblin ear
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -25, range = 7, shootEffect = CONST_ANI_SMALLSTONE, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -13 },
+	{ name = "combat", interval = 2000, chance = 40, type = COMBAT_PHYSICALDAMAGE, minDamage = -10, maxDamage = -25, range = 7, shootEffect = CONST_ANI_SMALLSTONE, target = false },
 }
 
 monster.defenses = {
-	defense = 10,
-	armor = 10,
+	defense = 5,
+	armor = 5,
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = -10 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 20 },
 	{ type = COMBAT_EARTHDAMAGE, percent = -12 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },

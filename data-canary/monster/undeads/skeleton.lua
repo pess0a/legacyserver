@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Skeleton")
 local monster = {}
 
 monster.description = "a skeleton"
-monster.experience = 35
+monster.experience = 45
 monster.outfit = {
 	lookType = 33,
 	lookHead = 0,
@@ -17,10 +17,10 @@ monster.raceId = 33
 monster.Bestiary = {
 	class = "Undead",
 	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
 	Stars = 2,
 	Occurrence = 0,
 	Locations = "In many dungeons around Tibia, like the Ancient Temple and Ghostlands. \z
@@ -28,8 +28,8 @@ monster.Bestiary = {
 		beneath Fenrock and in the desert Tombs, Vengoth Castle.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 75
+monster.maxHealth = 75
 monster.race = "undead"
 monster.corpse = 5972
 monster.speed = 77
@@ -77,20 +77,20 @@ monster.voices = {
 monster.loot = {
 	{ id = 2920, chance = 10000 }, -- torch
 	{ id = 2920, chance = 9880 }, -- torch
-	{ id = 3031, chance = 43900, maxCount = 10 }, -- gold coin
+	{ id = 3031, chance = 95900, maxCount = 15 }, -- gold coin
 	{ id = 3115, chance = 49100 }, -- bone
-	{ id = 3264, chance = 1940 }, -- sword
-	{ id = 3276, chance = 4850 }, -- hatchet
-	{ id = 3286, chance = 4850 }, -- mace
-	{ id = 3367, chance = 7520 }, -- viking helmet
-	{ id = 3411, chance = 2090 }, -- brass shield
+	{ id = 3264, chance = 1500 }, -- sword
+	{ id = 3276, chance = 1000 }, -- hatchet
+	{ id = 3286, chance = 1000 }, -- mace
+	{ id = 3367, chance = 2500 }, -- viking helmet
+	{ id = 3411, chance = 1000 }, -- brass shield
 	{ id = 11481, chance = 9940 }, -- pelvis bone
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -20 },
-	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -7, maxDamage = -13, range = 1, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -18 },
+	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_LIFEDRAIN, minDamage = -10, maxDamage = -20, range = 1, target = false },
 }
 
 monster.defenses = {
@@ -106,7 +106,7 @@ monster.elements = {
 	{ type = COMBAT_LIFEDRAIN, percent = 100 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 100 },
-	{ type = COMBAT_ICEDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -10 },
 	{ type = COMBAT_HOLYDAMAGE, percent = -5 },
 	{ type = COMBAT_DEATHDAMAGE, percent = 100 },
 }

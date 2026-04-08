@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Poison Spider")
 local monster = {}
 
 monster.description = "a poison spider"
-monster.experience = 22
+monster.experience = 33
 monster.outfit = {
 	lookType = 36,
 	lookHead = 0,
@@ -17,20 +17,20 @@ monster.raceId = 36
 monster.Bestiary = {
 	class = "Vermin",
 	race = BESTY_RACE_VERMIN,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
+	Stars = 2,
 	Occurrence = 0,
 	Locations = "Found in various caves and plains around Tibia (including Rookgaard).",
 }
 
-monster.health = 26
-monster.maxHealth = 26
+monster.health = 35
+monster.maxHealth = 35
 monster.race = "venom"
 monster.corpse = 5974
-monster.speed = 80
+monster.speed = 155
 monster.manaCost = 270
 
 monster.changeTarget = {
@@ -73,12 +73,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 75000, maxCount = 4 }, -- gold coin
-	{ id = 11485, chance = 1140 }, -- poison spider shell
+	{ id = 3031, chance = 75000, maxCount = 6 }, -- gold coin
+	{ id = 11485, chance = 5100 }, -- poison spider shell
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -20, condition = { type = CONDITION_POISON, totalDamage = 30, interval = 4000 } },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -20, condition = { type = CONDITION_POISON, totalDamage = 60, interval = 4000 } },
 }
 
 monster.defenses = {

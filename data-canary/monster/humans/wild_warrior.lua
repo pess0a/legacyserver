@@ -1,0 +1,120 @@
+local mType = Game.createMonsterType("Wild Warrior")
+local monster = {}
+
+monster.description = "a wild warrior"
+monster.experience = 200
+monster.outfit = {
+	lookType = 131,
+	lookHead = 38,
+	lookBody = 38,
+	lookLegs = 38,
+	lookFeet = 38,
+	lookAddons = 1,
+	lookMount = 0,
+}
+
+monster.raceId = 47
+monster.Bestiary = {
+	class = "Human",
+	race = BESTY_RACE_HUMAN,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
+	Stars = 3,
+	Occurrence = 0,
+	Locations = "Dark Cathedral, Outlaw Camp, North of Thais, Cyclopolis, in Edron Hero Cave and around it, \z
+		the small camp near Femor Hills, in Ghostlands disguised as a statue.",
+}
+
+monster.health = 450
+monster.maxHealth = 450
+monster.race = "blood"
+monster.corpse = 18250
+monster.speed = 95
+monster.manaCost = 420
+
+monster.changeTarget = {
+	interval = 4000,
+	chance = 0,
+}
+
+monster.strategiesTarget = {
+	nearest = 100,
+}
+
+monster.flags = {
+	summonable = true,
+	attackable = true,
+	hostile = true,
+	convinceable = true,
+	pushable = true,
+	rewardBoss = false,
+	illusionable = true,
+	canPushItems = true,
+	canPushCreatures = false,
+	staticAttackChance = 90,
+	targetDistance = 1,
+	runHealth = 0,
+	healthHidden = false,
+	isBlockable = false,
+	canWalkOnEnergy = false,
+	canWalkOnFire = false,
+	canWalkOnPoison = false,
+}
+
+monster.light = {
+	level = 0,
+	color = 0,
+}
+
+monster.voices = {
+	interval = 5000,
+	chance = 10,
+	{ text = "Gimme your money!", yell = false },
+	{ text = "An enemy!", yell = false },
+}
+
+monster.loot = {
+	{ id = 2991, chance = 50 }, -- doll
+	{ name = "gold coin", chance = 99070, maxCount = 90 },
+	{ id = 3048, chance = 3000 }, -- might ring
+	{ id = 7386, chance = 50 }, -- mercenary sword
+	{ name = "iron helmet", chance = 100 },
+	{ name = "brass armor", chance = 100 },
+	{ name = "steel shield", chance = 100 },
+	{ id = 3606, chance = 9730, maxCount = 2 }, -- egg
+}
+
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = -35, maxDamage = -70 },
+	{ name = "combat", interval = 2000, chance = 50, type = COMBAT_PHYSICALDAMAGE, minDamage = -70, maxDamage = -135, radius = 3, effect = CONST_ME_GROUNDSHAKER, target = false },
+}
+
+monster.defenses = {
+	defense = 10,
+	armor = 10,
+	mitigation = 0.46,
+}
+
+monster.elements = {
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 10 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_LIFEDRAIN, percent = 0 },
+	{ type = COMBAT_MANADRAIN, percent = 0 },
+	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -10 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 10 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -15 },
+}
+
+monster.immunities = {
+	{ type = "paralyze", condition = false },
+	{ type = "outfit", condition = false },
+	{ type = "invisible", condition = false },
+	{ type = "bleed", condition = false },
+}
+
+mType:register(monster)

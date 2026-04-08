@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Crocodile")
 local monster = {}
 
 monster.description = "a crocodile"
-monster.experience = 40
+monster.experience = 60
 monster.outfit = {
 	lookType = 119,
 	lookHead = 0,
@@ -17,18 +17,18 @@ monster.raceId = 119
 monster.Bestiary = {
 	class = "Reptile",
 	race = BESTY_RACE_REPTILE,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
 	Stars = 2,
 	Occurrence = 0,
 	Locations = "In the crocodile cave and the jungle east of Port Hope as well as the swamp to the north, \z
 		Fenrock, Arena and Zoo Quarter, Trade Quarter, Talahu, also located on Meriana and Laguna Islands.",
 }
 
-monster.health = 105
-monster.maxHealth = 105
+monster.health = 120
+monster.maxHealth = 120
 monster.race = "blood"
 monster.corpse = 6046
 monster.speed = 78
@@ -53,7 +53,7 @@ monster.flags = {
 	rewardBoss = false,
 	illusionable = true,
 	canPushItems = true,
-	canPushCreatures = true,
+	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
 	runHealth = 10,
@@ -78,27 +78,27 @@ monster.loot = {
 	{ id = 3031, chance = 50000, maxCount = 10 }, -- gold coin
 	{ id = 3582, chance = 40000 }, -- ham
 	{ id = 3556, chance = 100 }, -- crocodile boots
-	{ id = 10279, chance = 20180 }, -- piece of crocodile leather
+	{ id = 10279, chance = 5000 }, -- piece of crocodile leather
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -40 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = -10, maxDamage = -40 },
 }
 
 monster.defenses = {
-	defense = 15,
-	armor = 15,
+	defense = 10,
+	armor = 10,
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = -5 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = -5 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = -10 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = 10 },
+	{ type = COMBAT_ICEDAMAGE, percent = 0 },
 	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
 	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
 }

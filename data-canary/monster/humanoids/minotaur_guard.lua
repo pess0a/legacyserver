@@ -1,0 +1,124 @@
+local mType = Game.createMonsterType("Minotaur Guard")
+local monster = {}
+
+monster.description = "a minotaur guard"
+monster.experience = 185
+monster.outfit = {
+	lookType = 29,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
+	lookAddons = 0,
+	lookMount = 0,
+}
+
+monster.raceId = 29
+monster.Bestiary = {
+	class = "Humanoid",
+	race = BESTY_RACE_HUMANOID,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
+	Stars = 3,
+	Occurrence = 0,
+	Locations = "Ancient Temple, Mintwallin, Minotaur Pyramid, Maze of Lost Souls, Folda, Cyclopolis, \z
+		Deeper Fibula Dungeon (level 50+ to open the door), Hero Cave, underground of Elvenbane, \z
+		Plains of Havoc, Kazordoon Minotaur Cave, Foreigner Quarter.",
+}
+
+monster.health = 320
+monster.maxHealth = 320
+monster.race = "blood"
+monster.corpse = 5983
+monster.speed = 90
+monster.manaCost = 550
+
+monster.changeTarget = {
+	interval = 4000,
+	chance = 10,
+}
+
+monster.strategiesTarget = {
+	nearest = 70,
+	health = 10,
+	damage = 20,
+}
+
+monster.flags = {
+	summonable = true,
+	attackable = true,
+	hostile = true,
+	convinceable = true,
+	pushable = false,
+	rewardBoss = false,
+	illusionable = true,
+	canPushItems = true,
+	canPushCreatures = true,
+	staticAttackChance = 90,
+	targetDistance = 1,
+	runHealth = 0,
+	healthHidden = false,
+	isBlockable = false,
+	canWalkOnEnergy = false,
+	canWalkOnFire = false,
+	canWalkOnPoison = false,
+}
+
+monster.light = {
+	level = 0,
+	color = 0,
+}
+
+monster.voices = {
+	interval = 5000,
+	chance = 10,
+	{ text = "Kirrl Karrrl!", yell = false },
+	{ text = "Kaplar", yell = false },
+}
+
+monster.loot = {
+	{ name = "gold coin", chance = 90640, maxCount = 50 },
+	{ name = "double axe", chance = 100 },
+	{ name = "brass armor", chance = 250 },
+	{ name = "brass legs", chance = 250 },
+	{ name = "battle shield", chance = 250 },
+	{ name = "fishing rod", chance = 480 },
+	{ name = "minotaur leather", chance = 9000 },
+	{ id = 7401, chance = 80 }, -- minotaur trophy
+	{ name = "minotaur horn", chance = 8330, maxCount = 2 },
+	{ name = "piece of warrior armor", chance = 5040 },
+}
+
+monster.attacks = {
+	{ name = "melee", interval = 2000, chance = 100, minDamage = -60, maxDamage = -120 },
+}
+
+monster.defenses = {
+	defense = 10,
+	armor = 10,
+	mitigation = 0.83,
+}
+
+monster.elements = {
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 20 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_FIREDAMAGE, percent = 20 },
+	{ type = COMBAT_LIFEDRAIN, percent = 0 },
+	{ type = COMBAT_MANADRAIN, percent = 0 },
+	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -20 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 10 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -15 },
+}
+
+monster.immunities = {
+	{ type = "paralyze", condition = false },
+	{ type = "outfit", condition = false },
+	{ type = "invisible", condition = false },
+	{ type = "bleed", condition = false },
+}
+
+mType:register(monster)

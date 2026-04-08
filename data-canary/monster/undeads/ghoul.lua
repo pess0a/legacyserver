@@ -17,11 +17,11 @@ monster.raceId = 18
 monster.Bestiary = {
 	class = "Undead",
 	race = BESTY_RACE_UNDEAD,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
 	CharmsPoints = 15,
-	Stars = 2,
+	Stars = 3,
 	Occurrence = 0,
 	Locations = "Ancient Temple in the Skeleton area, way to Mintwallin, Old Mintwallin Quest, \z
 		Alatar Lake, Magician Tower, Mount Sternum Undead Cave, Ghostlands, Hellgate, \z
@@ -33,8 +33,8 @@ monster.Bestiary = {
 		Also found behind a wall in both Rookgaard and Paradox Tower, although they cannot be reached.",
 }
 
-monster.health = 100
-monster.maxHealth = 100
+monster.health = 200
+monster.maxHealth = 200
 monster.race = "blood"
 monster.corpse = 5976
 monster.speed = 72
@@ -81,17 +81,14 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 5000 }, -- torch
-	{ id = 3031, chance = 68000, maxCount = 30 }, -- gold coin
-	{ id = 3052, chance = 180 }, -- life ring
-	{ id = 3114, chance = 240 }, -- skull
-	{ id = 3367, chance = 990 }, -- viking helmet
-	{ id = 3377, chance = 1000 }, -- scale armor
+	{ id = 3031, chance = 78000, maxCount = 30 }, -- gold coin
+	{ id = 3052, chance = 3000 }, -- life ring
+	{ id = 3367, chance = 3000 }, -- viking helmet
 	{ id = 3492, chance = 9600, maxCount = 2 }, -- worm
-	{ id = 5913, chance = 1000 }, -- brown piece of cloth
+	{ id = 5913, chance = 5000 }, -- brown piece of cloth
 	{ id = 10291, chance = 14470 }, -- rotten piece of cloth
-	{ id = 11467, chance = 5130 }, -- ghoul snack
-	{ id = 11484, chance = 950 }, -- pile of grave earth
-	{ id = 23986, chance = 1000 }, -- heavy old tome
+	{ id = 11467, chance = 5000 }, -- ghoul snack
+	{ id = 11484, chance = 5000 }, -- pile of grave earth
 }
 
 monster.attacks = {

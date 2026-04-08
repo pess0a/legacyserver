@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Wasp")
 local monster = {}
 
 monster.description = "a wasp"
-monster.experience = 24
+monster.experience = 28
 monster.outfit = {
 	lookType = 44,
 	lookHead = 0,
@@ -17,10 +17,10 @@ monster.raceId = 44
 monster.Bestiary = {
 	class = "Vermin",
 	race = BESTY_RACE_VERMIN,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 50,
 	Stars = 1,
 	Occurrence = 0,
 	Locations = "South of Thais, west of Ab'Dendriel, northeastern Cormaya, \z
@@ -81,17 +81,17 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 1500, chance = 100, minDamage = 0, maxDamage = -20, condition = { type = CONDITION_POISON, totalDamage = 20, interval = 4000 } },
+	{ name = "melee", interval = 1500, chance = 100, minDamage = 0, maxDamage = -15, condition = { type = CONDITION_POISON, totalDamage = 40, interval = 4000 } },
 }
 
 monster.defenses = {
-	defense = 10,
-	armor = 10,
+	defense = 2,
+	armor = 2,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = -10 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 100 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },

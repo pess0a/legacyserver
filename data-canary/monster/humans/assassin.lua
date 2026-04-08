@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Assassin")
 local monster = {}
 
 monster.description = "an assassin"
-monster.experience = 105
+monster.experience = 250
 monster.outfit = {
 	lookType = 152,
 	lookHead = 114,
@@ -17,20 +17,20 @@ monster.raceId = 224
 monster.Bestiary = {
 	class = "Human",
 	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
+	Stars = 3,
 	Occurrence = 0,
 	Locations = "Dark Cathedral, Trade Quarter, Factory Quarter, Foreigner Quarter.",
 }
 
-monster.health = 175
-monster.maxHealth = 175
+monster.health = 500
+monster.maxHealth = 500
 monster.race = "blood"
 monster.corpse = 18046
-monster.speed = 112
+monster.speed = 180
 monster.manaCost = 450
 
 monster.changeTarget = {
@@ -79,35 +79,29 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 29980, maxCount = 2 }, -- torch
-	{ id = 3028, chance = 220 }, -- small diamond
-	{ id = 3031, chance = 83210, maxCount = 50 }, -- gold coin
-	{ id = 3031, chance = 7250, maxCount = 14 }, -- gold coin
+	{ id = 3031, chance = 100000, maxCount = 80 }, -- gold coin
 	{ id = 3291, chance = 9500 }, -- knife
+	{ id = 3048, chance = 4000 }, -- might ring
+	{ id = 31737, chance = 25 }, --- item do addon do assassin
+	{ id = 7386, chance = 50 }, -- mercenary sword
 	{ id = 3292, chance = 4000 }, -- combat knife
-	{ id = 3351, chance = 3230 }, -- steel helmet
-	{ id = 3409, chance = 970 }, -- steel shield
-	{ id = 3410, chance = 1900 }, -- plate shield
-	{ id = 3413, chance = 1600 }, -- battle shield
-	{ id = 3404, chance = 480 }, -- leopard armor
-	{ id = 3405, chance = 230 }, -- horseman helmet
+	{ id = 3404, chance = 100 }, -- leopard armor
+	{ id = 3405, chance = 100 }, -- horseman helmet
 	{ id = 7366, chance = 4200, maxCount = 7 }, -- viper star
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -120 },
-	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -40, range = 7, shootEffect = CONST_ANI_THROWINGSTAR, target = false },
-	-- poison
-	{ name = "condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -120, maxDamage = -160, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = -60, maxDamage = -125 },
+	{ name = "combat", interval = 2000, chance = 70, type = COMBAT_PHYSICALDAMAGE, minDamage = -60, maxDamage = -125, range = 7, shootEffect = CONST_ANI_THROWINGSTAR, target = false },
 }
 
 monster.defenses = {
-	defense = 15,
-	armor = 15,
-	{ name = "invisible", interval = 2000, chance = 10, effect = CONST_ME_MAGIC_BLUE },
+	defense = 10,
+	armor = 10,
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = -5 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 10 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
@@ -116,7 +110,7 @@ monster.elements = {
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 0 },
 	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = -5 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -15 },
 }
 
 monster.immunities = {

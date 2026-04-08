@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Troll")
 local monster = {}
 
 monster.description = "a troll"
-monster.experience = 20
+monster.experience = 30
 monster.outfit = {
 	lookType = 15,
 	lookHead = 0,
@@ -17,21 +17,21 @@ monster.raceId = 15
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
+	Stars = 2,
 	Occurrence = 0,
 	Locations = "In many dungeons around Tibia like the troll cave in Thais, south of Carlin (out the east \z
 		exit and down the hole), Island of Destiny, Edron Troll Cave, and in Ab'Dendriel. Also found in Rookgaard.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 70
+monster.maxHealth = 70
 monster.race = "blood"
 monster.corpse = 5960
-monster.speed = 63
+monster.speed = 80
 monster.manaCost = 290
 
 monster.changeTarget = {
@@ -55,7 +55,7 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 15,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -80,33 +80,31 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3003, chance = 7950 }, -- rope
-	{ id = 3031, chance = 65300, maxCount = 12 }, -- gold coin
-	{ id = 3054, chance = 80 }, -- silver amulet
-	{ id = 3268, chance = 18000 }, -- hand axe
-	{ id = 3277, chance = 13000 }, -- spear
+	{ id = 3031, chance = 99300, maxCount = 22 }, -- gold coin
+	{ id = 3054, chance = 50 }, -- silver amulet
 	{ id = 3336, chance = 5000 }, -- studded club
-	{ id = 3355, chance = 12000 }, -- leather helmet
-	{ id = 3412, chance = 4730 }, -- wooden shield
-	{ id = 3552, chance = 10000 }, -- leather boots
+	{ id = 3355, chance = 10000 }, -- leather helmet
+	{ id = 3412, chance = 2000 }, -- wooden shield
+	{ id = 3552, chance = 3000 }, -- leather boots
 	{ id = 3577, chance = 15000 }, -- meat
-	{ id = 9689, chance = 1000 }, -- bunch of troll hair
+	{ id = 9689, chance = 2500 }, -- bunch of troll hair
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -15 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -18 },
 }
 
 monster.defenses = {
-	defense = 10,
-	armor = 10,
+	defense = 6,
+	armor = 7,
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 25 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -10 },
-	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = -10 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 10 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 10 },
+	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },

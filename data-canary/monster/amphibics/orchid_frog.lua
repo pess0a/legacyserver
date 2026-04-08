@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Orchid Frog")
 local monster = {}
 
 monster.description = "an orchid frog"
-monster.experience = 20
+monster.experience = 50
 monster.outfit = {
 	lookType = 226,
 	lookHead = 109,
@@ -17,17 +17,17 @@ monster.raceId = 271
 monster.Bestiary = {
 	class = "Amphibic",
 	race = BESTY_RACE_AMPHIBIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
 	Stars = 2,
 	Occurrence = 0,
 	Locations = "Meriana, Laguna Islands, and other Shattered Isles.",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 35
+monster.maxHealth = 35
 monster.race = "blood"
 monster.corpse = 6079
 monster.speed = 160
@@ -75,23 +75,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 73230, maxCount = 10 },
+	{ name = "gold coin", chance = 80230, maxCount = 7 },
 	{ name = "worm", chance = 8000 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -24, effect = CONST_ME_DRAWBLOOD },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -25, effect = CONST_ME_DRAWBLOOD },
 }
 
 monster.defenses = {
-	defense = 5,
-	armor = 5,
+	defense = 3,
+	armor = 3,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = -15 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 10 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

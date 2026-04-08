@@ -17,17 +17,17 @@ monster.raceId = 268
 monster.Bestiary = {
 	class = "Amphibic",
 	race = BESTY_RACE_AMPHIBIC,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
 	Stars = 2,
 	Occurrence = 0,
 	Locations = "Meriana, Laguna Islands, and other Shattered Isles.",
 }
 
-monster.health = 60
-monster.maxHealth = 60
+monster.health = 30
+monster.maxHealth = 30
 monster.race = "blood"
 monster.corpse = 6079
 monster.speed = 160
@@ -75,23 +75,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 74230, maxCount = 10 },
+	{ name = "gold coin", chance = 74230, maxCount = 2 },
 	{ name = "worm", chance = 9240 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -24, effect = CONST_ME_DRAWBLOOD },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -15, effect = CONST_ME_DRAWBLOOD },
 }
 
 monster.defenses = {
-	defense = 5,
-	armor = 8,
+	defense = 3,
+	armor = 3,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = -15 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 10 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

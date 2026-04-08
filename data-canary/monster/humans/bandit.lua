@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Bandit")
 local monster = {}
 
 monster.description = "a bandit"
-monster.experience = 65
+monster.experience = 170
 monster.outfit = {
 	lookType = 129,
 	lookHead = 58,
@@ -17,18 +17,18 @@ monster.raceId = 223
 monster.Bestiary = {
 	class = "Human",
 	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
+	Stars = 3,
 	Occurrence = 0,
 	Locations = "Dark Cathedral, Tiquanda Bandit Caves, Outlaw Camp, mountain pass west of Ankrahmun, \z
 		Tyrsung, Thais Bandit Cave, Formorgar Mines. Also summoned by Gamel.",
 }
 
-monster.health = 245
-monster.maxHealth = 245
+monster.health = 350
+monster.maxHealth = 350
 monster.race = "blood"
 monster.corpse = 18050
 monster.speed = 90
@@ -76,24 +76,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 49000, maxCount = 30 }, -- gold coin
+	{ id = 3031, chance = 90000, maxCount = 80 }, -- gold coin
 	{ id = 3274, chance = 29900 }, -- axe
-	{ id = 3286, chance = 10100 }, -- mace
+	{ id = 3286, chance = 2000 }, -- mace
 	{ id = 3352, chance = 5000 }, -- chain helmet
-	{ id = 3353, chance = 520 }, -- iron helmet
-	{ id = 3359, chance = 2500 }, -- brass armor
-	{ id = 3411, chance = 16800 }, -- brass shield
-	{ id = 3559, chance = 15500 }, -- leather legs
+	{ id = 3353, chance = 100 }, -- iron helmet
+	{ id = 3359, chance = 100 }, -- brass armor
+	{ id = 3411, chance = 8000 }, -- brass shield
 	{ id = 3596, chance = 7630, maxCount = 2 }, -- tomato
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -45 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -70 },
 }
 
 monster.defenses = {
-	defense = 15,
-	armor = 15,
+	defense = 10,
+	armor = 10,
 }
 
 monster.elements = {
@@ -106,7 +105,7 @@ monster.elements = {
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 0 },
 	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = -5 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -10 },
 }
 
 monster.immunities = {

@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Snake")
 local monster = {}
 
 monster.description = "a snake"
-monster.experience = 10
+monster.experience = 15
 monster.outfit = {
 	lookType = 28,
 	lookHead = 0,
@@ -17,20 +17,20 @@ monster.raceId = 28
 monster.Bestiary = {
 	class = "Reptile",
 	race = BESTY_RACE_REPTILE,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
 	Stars = 1,
 	Occurrence = 0,
 	Locations = "In almost all grassy areas of Tibia. Also found in Rookgaard.",
 }
 
-monster.health = 15
-monster.maxHealth = 15
+monster.health = 20
+monster.maxHealth = 20
 monster.race = "blood"
 monster.corpse = 3998
-monster.speed = 60
+monster.speed = 90
 monster.manaCost = 205
 
 monster.changeTarget = {
@@ -76,7 +76,7 @@ monster.voices = {
 monster.loot = {}
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8, condition = { type = CONDITION_POISON, totalDamage = 15, interval = 4000 } },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10, condition = { type = CONDITION_POISON, totalDamage = 30, interval = 4000 } },
 }
 
 monster.defenses = {
@@ -85,7 +85,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = -10 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 20 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 5 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },

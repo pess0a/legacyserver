@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Tortoise")
 local monster = {}
 
 monster.description = "a tortoise"
-monster.experience = 90
+monster.experience = 80
 monster.outfit = {
 	lookType = 197,
 	lookHead = 0,
@@ -17,11 +17,11 @@ monster.raceId = 258
 monster.Bestiary = {
 	class = "Reptile",
 	race = BESTY_RACE_REPTILE,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
+	Stars = 3,
 	Occurrence = 0,
 	Locations = "Laguna Islands, Fenrock, Port Hope and also can be found behind a wall below the \z
 		center of Liberty Bay. These cannot be reached.",
@@ -74,13 +74,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 59000, maxCount = 30 }, -- gold coin
-	{ id = 3305, chance = 730 }, -- battle hammer
+	{ id = 3031, chance = 79000, maxCount = 30 }, -- gold coin
 	{ id = 3410, chance = 2850 }, -- plate shield
 	{ id = 3578, chance = 4600 }, -- fish
 	{ id = 5678, chance = 770, maxCount = 2 }, -- tortoise egg
 	{ id = 5899, chance = 1300 }, -- turtle shell
-	{ id = 6131, chance = 200 }, -- tortoise shield
+	{ id = 6131, chance = 100 }, -- tortoise shield
 }
 
 monster.attacks = {
@@ -88,13 +87,13 @@ monster.attacks = {
 }
 
 monster.defenses = {
-	defense = 30,
-	armor = 30,
+	defense = 10,
+	armor = 10,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 35 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = -20 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },

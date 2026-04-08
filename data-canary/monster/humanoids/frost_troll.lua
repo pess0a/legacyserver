@@ -82,7 +82,7 @@ monster.loot = {
 	{ id = 3412, chance = 15850 }, -- wooden shield
 	{ id = 3562, chance = 1200 }, -- coat
 	{ id = 3578, chance = 18000 }, -- fish
-	{ id = 9648, chance = 2000 }, -- frosty ear of a troll
+	{ id = 9648, chance = 5000 }, -- frosty ear of a troll
 }
 
 monster.attacks = {

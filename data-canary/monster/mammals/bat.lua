@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Bat")
 local monster = {}
 
 monster.description = "a bat"
-monster.experience = 10
+monster.experience = 15
 monster.outfit = {
 	lookType = 122,
 	lookHead = 0,
@@ -17,10 +17,10 @@ monster.raceId = 122
 monster.Bestiary = {
 	class = "Mammal",
 	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
 	Stars = 1,
 	Occurrence = 0,
 	Locations = "Dark Cathedral, Tiquanda, Drefia, Mount Sternum, Folda, Ghostlands, Kazordoon, \z
@@ -75,11 +75,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 5894, chance = 1220 }, -- bat wing
+	{ id = 5894, chance = 5000 }, -- bat wing
+	{ id = 3588, chance = 40000 }, -- blueberry
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
 }
 
 monster.defenses = {
@@ -90,8 +91,8 @@ monster.defenses = {
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
-	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_FIREDAMAGE, percent = 10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },

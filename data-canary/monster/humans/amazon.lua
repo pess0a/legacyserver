@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Amazon")
 local monster = {}
 
 monster.description = "an amazon"
-monster.experience = 60
+monster.experience = 80
 monster.outfit = {
 	lookType = 137,
 	lookHead = 113,
@@ -17,18 +17,18 @@ monster.raceId = 77
 monster.Bestiary = {
 	class = "Human",
 	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
 	Stars = 2,
 	Occurrence = 0,
 	Locations = "Venore Amazon Camp, Carlin Amazon Camp, Amazon Tower, east of Carlin, underneath the Fields of Glory, \z
 		west of Venore, Oasis Tomb, on the smallest of the Laguna Islands, Foreigner Quarter and Trade Quarter.",
 }
 
-monster.health = 110
-monster.maxHealth = 110
+monster.health = 160
+monster.maxHealth = 160
 monster.race = "blood"
 monster.corpse = 18042
 monster.speed = 86
@@ -54,7 +54,7 @@ monster.flags = {
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
-	targetDistance = 4,
+	targetDistance = 1,
 	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
@@ -82,7 +82,7 @@ monster.loot = {
 	{ id = 3031, chance = 40000, maxCount = 20 }, -- gold coin
 	{ id = 3602, chance = 30000 }, -- brown bread
 	{ id = 3273, chance = 23000 }, -- sabre
-	{ id = 11443, chance = 10000 }, -- girlish hair decoration
+	{ id = 11443, chance = 5000 }, -- girlish hair decoration
 	{ id = 11444, chance = 5200 }, -- protective charm
 	{ id = 2920, chance = 1000 }, -- torch
 	{ id = 3008, chance = 260 }, -- crystal necklace
@@ -100,7 +100,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = -5 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
@@ -109,7 +109,7 @@ monster.elements = {
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 0 },
 	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = -5 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -10 },
 }
 
 monster.immunities = {

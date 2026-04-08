@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Spider")
 local monster = {}
 
 monster.description = "a spider"
-monster.experience = 12
+monster.experience = 14
 monster.outfit = {
 	lookType = 30,
 	lookHead = 0,
@@ -17,18 +17,18 @@ monster.raceId = 30
 monster.Bestiary = {
 	class = "Vermin",
 	race = BESTY_RACE_VERMIN,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
+	toKill = 1250,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
 	Stars = 1,
 	Occurrence = 0,
 	Locations = "Almost everywhere, in grass areas, sewers like Carlin sewers, \z
 		caves like as Ancient Temple, Rookgaard and the Tiquanda Tarantula Caves.",
 }
 
-monster.health = 20
-monster.maxHealth = 20
+monster.health = 25
+monster.maxHealth = 25
 monster.race = "venom"
 monster.corpse = 5961
 monster.speed = 76
@@ -74,12 +74,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 3031, chance = 65150, maxCount = 5 }, -- gold coin
-	{ id = 8031, chance = 960 }, -- spider fangs
+	{ id = 3031, chance = 65150, maxCount = 3 }, -- gold coin
+	{ id = 8031, chance = 10000 }, -- spider fangs
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -9 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -12 },
 }
 
 monster.defenses = {

@@ -2,14 +2,14 @@ local mType = Game.createMonsterType("Valkyrie")
 local monster = {}
 
 monster.description = "a valkyrie"
-monster.experience = 85
+monster.experience = 150
 monster.outfit = {
 	lookType = 139,
 	lookHead = 113,
 	lookBody = 38,
 	lookLegs = 95,
 	lookFeet = 96,
-	lookAddons = 0,
+	lookAddons = 1,
 	lookMount = 0,
 }
 
@@ -17,18 +17,18 @@ monster.raceId = 12
 monster.Bestiary = {
 	class = "Human",
 	race = BESTY_RACE_HUMAN,
-	toKill = 500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
-	CharmsPoints = 15,
-	Stars = 2,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
+	Stars = 3,
 	Occurrence = 0,
 	Locations = "Amazon Camp (Venore), Amazon Camp (Carlin), Amazonia, \z
 		single respawn to the north west of Thais, Foreigner Quarter in Yalahar.",
 }
 
-monster.health = 190
-monster.maxHealth = 190
+monster.health = 250
+monster.maxHealth = 250
 monster.race = "blood"
 monster.corpse = 18242
 monster.speed = 88
@@ -80,18 +80,17 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3277, chance = 55000, maxCount = 3 }, -- spear
-	{ id = 3031, chance = 32000, maxCount = 12 }, -- gold coin
+	{ id = 3031, chance = 82000, maxCount = 50 }, -- gold coin
 	{ id = 3577, chance = 30000 }, -- meat
-	{ id = 3358, chance = 10000 }, -- chain armor
+	{ id = 3358, chance = 3000 }, -- chain armor
 	{ id = 3585, chance = 7500, maxCount = 2 }, -- red apple
 	{ id = 11443, chance = 5900 }, -- girlish hair decoration
 	{ id = 3347, chance = 5155 }, -- hunting spear
-	{ id = 11444, chance = 3200 }, -- protective charm
-	{ id = 3084, chance = 1100 }, -- protection amulet
-	{ id = 3357, chance = 830 }, -- plate armor
+	{ id = 11444, chance = 5000 }, -- protective charm
+	{ id = 3084, chance = 100 }, -- protection amulet
+	{ id = 3357, chance = 200 }, -- plate armor
 	{ id = 3114, chance = 760 }, -- skull
-	{ id = 266, chance = 500 }, -- health potion
-	{ id = 3275, chance = 430 }, -- double axe
+	{ id = 3275, chance = 40 }, -- double axe
 	{ id = 3028, chance = 130 }, -- small diamond
 }
 

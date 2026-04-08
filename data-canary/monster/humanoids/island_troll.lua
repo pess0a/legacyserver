@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Island Troll")
 local monster = {}
 
 monster.description = "an island troll"
-monster.experience = 20
+monster.experience = 70
 monster.outfit = {
 	lookType = 282,
 	lookHead = 0,
@@ -17,20 +17,20 @@ monster.raceId = 277
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 2500,
+	FirstUnlock = 125,
+	SecondUnlock = 1250,
+	CharmsPoints = 75,
+	Stars = 2,
 	Occurrence = 0,
 	Locations = "Goroma.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 130
+monster.maxHealth = 130
 monster.race = "blood"
 monster.corpse = 865
-monster.speed = 63
+monster.speed = 80
 monster.manaCost = 290
 
 monster.changeTarget = {
@@ -50,11 +50,11 @@ monster.flags = {
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 15,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -82,18 +82,16 @@ monster.loot = {
 	{ id = 3031, chance = 60000, maxCount = 10 }, -- gold coin
 	{ id = 3054, chance = 70 }, -- silver amulet
 	{ id = 3268, chance = 18000 }, -- hand axe
-	{ id = 3277, chance = 20000 }, -- spear
 	{ id = 3336, chance = 5000 }, -- studded club
 	{ id = 3355, chance = 10000 }, -- leather helmet
-	{ id = 3412, chance = 16000 }, -- wooden shield
-	{ id = 3552, chance = 10500 }, -- leather boots
 	{ id = 5096, chance = 5000 }, -- mango
-	{ id = 5901, chance = 30000 }, -- wood
+	{ id = 5901, chance = 50000, maxCount = 2 }, -- wood
 	{ id = 901, chance = 40 }, -- marlin
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = -12, maxDamage = -46 },
+	{ name = "combat", interval = 2000, chance = 50, type = COMBAT_ICEDAMAGE, minDamage = -8, maxDamage = -16, effect = CONST_ME_WATERSPLASH, target = false },
 }
 
 monster.defenses = {
